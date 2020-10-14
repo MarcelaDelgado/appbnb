@@ -50,7 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
    the array */
 if (isset($_POST['submit']) and !empty($_POST['submit'])
     and ($_POST['submit'] == 'Update')) {
-       
+
 /* validate incoming data - only the first field is done for 
    you in this example - rest is up to you do*/
 
@@ -74,14 +74,13 @@ $msg = 'Error: ';
 //firstname
        $firstname = cleanInput($_POST['firstname']); 
 //lastname
-       $lastname = cleanInput($_POST['lastname']); 
-        
+       $lastname = cleanInput($_POST['lastname']);
 //phone
-       $phone = cleanInput($_POST['phone']);        
+       $phone = cleanInput($_POST['phone']);
 //extras
-       $extras = cleanInput($_POST['extras']);        
+       $extras = cleanInput($_POST['extras']);
     //review
-       $review = cleanInput($_POST['review']);   
+       $review = cleanInput($_POST['review']);
 //save the member data if the error flag is still clear and member id is > 0
     if ($error == 0 and $id > 0) {
         $query = "UPDATE `booking` SET roomname=?,checkin=?,checkout=?,firstname=?,lastname=?,phone=?,extras=?,review=? WHERE bookingID=?";
@@ -91,7 +90,7 @@ $msg = 'Error: ';
         mysqli_stmt_close($stmt);    
         //echo "<h2>Member details updated.</h2>";    
 //out echo and add a redirect///////////////////////////////////////////////////////////////// 
-		header('Location: http://mysql02.au.ds.network:3306/currentbookinglist.php', true, 301);
+		header('Location: http://  /currentbookinglist.php', true, 301);
           die();  
  } else { 
       echo "<h2>$msg</h2>".PHP_EOL;

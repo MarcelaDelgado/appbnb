@@ -86,7 +86,7 @@ loginStatus();
   <p>
     <label for="description">Description: </label>
     <input type="text" id="description" size="100" name="description" minlength="5" maxlength="200" required> 
-  </p>  
+  </p>
   <p>  
     <label for="roomtype">Room type: </label>
     <input type="radio" id="roomtype" name="roomtype" value="S"> Single 

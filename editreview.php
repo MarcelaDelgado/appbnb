@@ -34,7 +34,7 @@ if (!$DBC) {
 
 
 function cleanInput($data) {
-	
+
 	return htmlspecialchars(stripslashes(trim($data)));
 }
 
@@ -52,7 +52,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
    the array */
 if (isset($_POST['submit']) and !empty($_POST['submit'])
     and ($_POST['submit'] == 'Update')) {
-       
+
 /* validate incoming data - only the first field is done for 
    you in this example - rest is up to you do*/
 
@@ -69,16 +69,16 @@ $msg = 'Error: ';
        $msg .= 'Invalid bookingID'; //append error message
        $id = 0;  
     }   
-	   
+
 //firstname
        $firstname = cleanInput($_POST['firstname']); 
 //lastname
        $lastname = cleanInput($_POST['lastname']); 
-        
+
 //email
-       $review = cleanInput($_POST['review']);        
-  
-    
+       $review = cleanInput($_POST['review']);
+
+
 //save the member data if the error flag is still clear and member id is > 0
     if ($error == 0 and $id > 0) {
         $query = "UPDATE `booking` SET firstname=?,lastname=?,review=? WHERE bookingID=?";
@@ -88,7 +88,7 @@ $msg = 'Error: ';
         mysqli_stmt_close($stmt);    
         //echo "<h2>Member details updated.</h2>";    
 //out echo and add a redirect///////////////////////////////////////////////////////////////// 
-		header('Location: http://mysql02.au.ds.network:3306/bnb/currentbookinglist.php', true, 301);
+		header('Location: http://   /currentbookinglist.php', true, 301);
           die();  
  } else { 
       echo "<h2>$msg</h2>".PHP_EOL;
@@ -130,17 +130,17 @@ loginStatus();
     <label for="lastname">Lastname: </label>
     <input type="text" id="lastname" name="lastname" minlength="3" 
            maxlength="50" required value="<?php echo $row['lastname']; ?>"> 
-  </p>    
-  
+  </p> 
+
 
   <p>
     <label for="review">Place a Review: </label>
 	<textarea id="review" name="review" rows="5" cols="50" value="<?php echo $row['review']; ?>">
    </textarea> <br><br> 
-   
+
   </p>  
-  
-  
+
+
    <input type="submit" name="submit" value="Update">
 
  </form>  
@@ -152,7 +152,6 @@ loginStatus();
 
 mysqli_close($DBC); //close the connection once done
 ?>
-   
+
 </body>
 </html>
-  

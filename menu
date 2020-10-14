@@ -5,7 +5,7 @@
    <meta name="viewport" content="width=device-width,initial-scale=1.0"/> 
    <meta http-equiv="X-UA-Compatible" content="ie=edge"/> 
    <title>menu</title>
-      
+
 </head>
 
 <body>	
@@ -20,18 +20,18 @@
       <div id="menubar">
         <ul id="menu">
           <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
-          <li class="selected"><a href="/bnb/index.php">Home</a></li>
-          <li><a href="/bnb/listrooms.php">Rooms</a></li>
-          <li><a href="/bnb/booking.php">Booking</a></li>
+          <li class="selected"><a href="index.php">Home</a></li>
+          <li><a href="listrooms.php">Rooms</a></li>
+          <li><a href="booking.php">Booking</a></li>
 	<!-- register link pointing to login.php ----we will not including any user control for now-->		  
-          <li><a href="/bnb/login.php">Register</a></li>
-          <li><a href="/bnb/login.php">Login</a></li>
-		  
-		  
+          <li><a href="login.php">Register</a></li>
+          <li><a href="login.php">Login</a></li>
+
+
 		 </ul>
-				
+
       </div>
-		  
+
     </div>
 </body>
 </html>
