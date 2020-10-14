@@ -46,7 +46,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
    the array */
 if (isset($_POST['submit']) and !empty($_POST['submit'])
     and ($_POST['submit'] == 'Update')) {
-       
+
 /* validate incoming data - only the first field is done for 
    you in this example - rest is up to you do*/
 
@@ -62,7 +62,7 @@ $msg = 'Error: ';
        $error++; //bump the error flag
        $msg .= 'Invalid roomID'; //append error message
        $id = 0;  
-    }   
+    }
 	   $roomname = cleanInput($_POST['roomname']);   
        $description = cleanInput($_POST['description']);
        $roomtype = cleanInput($_POST['roomtype']); 
@@ -73,14 +73,14 @@ $msg = 'Error: ';
         $stmt = mysqli_prepare($DBC,$query); //prepare the query
         mysqli_stmt_bind_param($stmt,'ssssi', $roomname,$description,$roomtype,$beds,$id); 
         mysqli_stmt_execute($stmt);
-        mysqli_stmt_close($stmt);    
-            
+        mysqli_stmt_close($stmt);
+
 //out echo and add a redirect///////////////////////////////////////////////////////////////// 
-		header('Location: http://mysql02.au.ds.network:3306/listrooms.php', true, 301);
+		header('Location: http://    /listrooms.php', true, 301);
           die();  
  } else { 
       echo "<h2>$msg</h2>".PHP_EOL;
-    }      
+    } 
  
 }
 
@@ -113,14 +113,14 @@ loginStatus();
   <p>
     <label for="roomname">Room name: </label>
     <input type="text" id="roomname" name="roomname" minlength="5" maxlength="50" required value="<?php echo $row['roomname']; ?>" > 
-  </p> 
-    
-  
+  </p>
+
+
   <p>
     <label for="description">Description: </label>
     <input type="text" id="description" size="100" name="description" minlength="5" maxlength="200" required value="<?php echo $row['description']; ?>"> 
-  </p>  
-  <p>  
+  </p>
+  <p>
     <label for="roomtype">Room type: </label>
     <input type="radio" id="roomtype" name="roomtype" value="S"> Single 
     <input type="radio" id="roomtype" name="roomtype" value="D" Checked>Double
@@ -131,11 +131,11 @@ loginStatus();
   </p> 
    <input type="submit" name="submit" value="Update">
     <a href="listrooms.php">[Cancel]</a> 
-   
-   
- </form>	
 
- 
+
+ </form>
+
+
 <?php
 } else { 
   echo "<h2>Room not found with that ID</h2>"; //simple error feedback
@@ -146,4 +146,3 @@ mysqli_close($DBC); //close the connection once done
 ?>
 </body>
 </html>
-  

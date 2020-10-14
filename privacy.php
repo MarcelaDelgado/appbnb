@@ -17,9 +17,9 @@ echo '<div id="content">';
 <div class="statement">
         <!-- insert your sidebar items here -->
 	 <h2><a href='index.php'>[Return to main page]</a> </h2>
-		
+
     <h2>Privacy Statement</h2>	 
-          
+
         <p>We respect your right to privacy, please read this Privacy policy, here you will find details of the info that we may collect from you and how we use that info.</p>
     <h2>About Us</h2>
         <p>1)In this policy reference to "we" or "us" are to The Ongaonga Bed and Breakfast.</p>
@@ -38,9 +38,8 @@ echo '<div id="content">';
     <p>4)You have the right to see the information that we store about you, and ask for a copy of any personal information we hold about you, and to ask to be corrected if you think it is wrong. If you would like to ask for correction, please contact us at ongaongabnbtest@mail.com 
 
     </p>    
-      
-     </div>	  	  
-	  
+
+     </div>
+
 	  </body>
 </html
-	  

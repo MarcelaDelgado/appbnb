@@ -24,10 +24,10 @@ $rowcount = mysqli_num_rows($result);
 
 <!-- button for logout-->
     <form method="POST" action="login.php">
-    <input type="submit" name="logout" value="Logout">   
+    <input type="submit" name="logout" value="Logout">
     </form>
 
-	
+
 <h1>Room list</h1>
 <h2><a href='addroom.php'>[Add a room]</a><a href="index.php">[Return to main page]</a></h2>
 <table border="1">
@@ -54,4 +54,3 @@ echo '</div></div>';
 require_once "footer.php";
 ?>
 
-  

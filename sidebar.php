@@ -10,10 +10,10 @@
 <div class="sidebar">
         <!-- insert your sidebar items here -->
 		<br>
-         <ul>          
+         <ul>
           <li><a href="https://en.wikipedia.org/wiki/Ongaonga,_New_Zealand">More about Ongaonga Town</a></li>
-          <li><a href="/bnb/privacy.php">Privacy statement</a></li>
-        </ul>       
-      </div>	  
+          <li><a href="privacy.php">Privacy statement</a></li>
+        </ul>
+</div>
 	</body>
 </html>  
