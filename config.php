@@ -61,7 +61,7 @@ if (isset($_POST['submit'])and !empty($_POST['submit']) and ($_POST['submit'] ==
        $msg = 'Invalid roomname '; //append error message
        $roomname = '';  
     } 
-	 	   	
+
         $checkin= cleanInput($_POST['checkin']);   $checkout = cleanInput($_POST['checkout']);    
 //first and lastname
          $firstname = cleanInput($_POST['firstname']);   
@@ -72,10 +72,8 @@ if (isset($_POST['submit'])and !empty($_POST['submit']) and ($_POST['submit'] ==
 //extras and review
        $extras = cleanInput($_POST['extras']);        
        $review = cleanInput($_POST['review']); 
-     
-  	
-//save the member data if the error flag is still clear     	   
-		   
+
+//save the member data if the error flag is still clear
  // prepare and bind
 $stmt = $DBC->prepare("INSERT INTO `booking` (roomname,checkin,checkout,firstname,lastname,phone,extras,review) VALUES (?,?,?,?,?,?,?,?)");
 $stmt->bind_param("ssssssss",$roomname, $checkin,$checkout,$firstname,$lastname, $phone, $extras,$review);
@@ -88,7 +86,7 @@ $stmt->close();
 echo "New records created successfully";
 
 $DBC->close();
-	                 
+
 }  	
 
 ?>
