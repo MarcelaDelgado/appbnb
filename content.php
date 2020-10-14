@@ -25,6 +25,6 @@ include "checksession.php";
 	<h2>(Please Register and Login Before Booking) </h2>
 	
 	<br><br>		
-	  <img src="/bnb/ongaongaTown.jpg" width="600" alt="Ongaonga Town"/>
+	  <img src="ongaongaTown.jpg" width="600" alt="Ongaonga Town"/>
 </body> 
 </html>
