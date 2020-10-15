@@ -9,7 +9,7 @@ function checkUser() {
     else {
        $_SESSION['URI'] = 'http:// '.$_SERVER['REQUEST_URI']; //save current url for redirect     
        header('Location: http://  /login.php', true, 303);       
-    }       
+    } 
 }
  
 //just to show we are logged in
