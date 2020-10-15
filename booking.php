@@ -10,7 +10,7 @@ echo '<div id="content">';
 ?>
 <!DOCTYPE HTML>
 <html lang="en">
-<head>    
+<head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
    <meta http-equiv="X-UA-Compatible" content="ie=edge"/> 
@@ -26,7 +26,7 @@ echo '<div id="content">';
 <?php
 
     include "config.php"; //load in any variables
-    $DBC = mysqli_connect(DBHOST, DBUSER, DBPASSWORD, DBDATABASE);
+    $DBC = mysqli_connect();
  
     if (mysqli_connect_errno()) {
         echo "Error: Unable to connect to MySQL. ".mysqli_connect_error() ;
@@ -44,7 +44,7 @@ function cleanInput($data) {
 //the data was sent using a form therefore we use the $_POST instead of $_GET
 //check if we are saving data first by checking if the submit button exists in the array
 if (isset($_POST['submit'])and !empty($_POST['submit']) and ($_POST['submit'] == 'Register')) {
-//if ($_SERVER["REQUEST_METHOD"] == "POST") { //alternative simpler POST test        
+//if ($_SERVER["REQUEST_METHOD"] == "POST") { //alternative simpler POST test
  
  //validate incoming data - only the first field is done for you in this example - rest is up to you to do
 //firstname
@@ -55,22 +55,21 @@ if (isset($_POST['submit'])and !empty($_POST['submit']) and ($_POST['submit'] ==
        $fn = cleanInput($_POST['roomname']); 
  //check length and clip if too big
        $roomname = (strlen($fn) > 50)?substr($fn,1,50):$fn; 
-       //we would also do context checking here for contents, etc           
+       //we would also do context checking here for contents, et
     } else {
        $error++; //bump the error flag
        $msg = 'Invalid roomname '; //append error message
        $roomname = '';  
     } 
-	 	   	
         $checkin= cleanInput($_POST['checkin']);   $checkout = cleanInput($_POST['checkout']);    
 //first and lastname
          $firstname = cleanInput($_POST['firstname']);   
          $lastname = cleanInput($_POST['lastname']);
 	  
 //phone
-       $phone = cleanInput($_POST['phone']);        
+       $phone = cleanInput($_POST['phone']);
 //extras and review
-       $extras = cleanInput($_POST['extras']);        
+       $extras = cleanInput($_POST['extras']);
        $review = cleanInput($_POST['review']); 
      
   	

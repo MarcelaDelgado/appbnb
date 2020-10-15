@@ -23,7 +23,7 @@ echo '<div id="content">';
 include "config.php"; //load in any variables
 
 // Create connection
-$DBC = mysqli_connect(DBHOST, DBUSER , DBPASSWORD, DBDATABASE);
+$DBC = mysqli_connect();
 // Check connection
 
 if ($DBC -> connect_errno) {

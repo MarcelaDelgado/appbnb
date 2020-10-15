@@ -15,16 +15,16 @@ echo '<div id="content">';
 
 <?php
 //function to clean input but not validate type and content
-function cleanInput($data) {  
+function cleanInput($data) {
   return htmlspecialchars(stripslashes(trim($data)));
 }
 
 //the data was sent using a formtherefore we use the $_POST instead of $_GET
 //check if we are saving data first by checking if the submit button exists in the array
 if (isset($_POST['submit']) and !empty($_POST['submit']) and ($_POST['submit'] == 'Add')) {
-//if ($_SERVER["REQUEST_METHOD"] == "POST") { //alternative simpler POST test    
+//if ($_SERVER["REQUEST_METHOD"] == "POST") { //alternative simpler POST test
     include "config.php"; //load in any variables
-    $DBC = mysqli_connect(DBHOST, DBUSER, DBPASSWORD, DBDATABASE);
+    $DBC = mysqli_connect();
 
     if (mysqli_connect_errno()) {
         echo "Error: Unable to connect to MySQL. ".mysqli_connect_error() ;
@@ -38,7 +38,7 @@ if (isset($_POST['submit']) and !empty($_POST['submit']) and ($_POST['submit'] =
     if (isset($_POST['roomname']) and !empty($_POST['roomname']) and is_string($_POST['roomname'])) {
        $fn = cleanInput($_POST['roomname']); 
        $roomname = (strlen($fn)>50)?substr($fn,1,50):$fn; //check length and clip if too big
-       //we would also do context checking here for contents, etc       
+       //we would also do context checking here for contents, etc
     } else {
        $error++; //bump the error flag
        $msg .= 'Invalid roomname '; //append eror message
@@ -46,11 +46,11 @@ if (isset($_POST['submit']) and !empty($_POST['submit']) and ($_POST['submit'] =
     } 
  
 //description
-       $description = cleanInput($_POST['description']);        
+       $description = cleanInput($_POST['description']); 
 //roomtype
-       $roomtype = cleanInput($_POST['roomtype']);            
+       $roomtype = cleanInput($_POST['roomtype']); 
 //beds    
-       $beds = cleanInput($_POST['beds']);        
+       $beds = cleanInput($_POST['beds']);
        
 //save the room data if the error flag is still clear
     if ($error == 0) {

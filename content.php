@@ -14,7 +14,7 @@ include "checksession.php";
  <body>
 <!-- button for logout-->
     <form method="POST" action="login.php">
-    <input type="submit" name="logout" value="Logout">   
+    <input type="submit" name="logout" value="Logout">
     </form>
 <!-- insert the page content here -->
         <h1>Welcome to the Ongaonga Bed & Breakfast</h1>
