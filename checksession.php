@@ -7,7 +7,7 @@ function checkUser() {
     if ($_SESSION['loggedin'] == 1)
        return TRUE;
     else {
-       $_SESSION['URI'] = 'http://us-cdbr-east-02.cleardb.com '.$_SERVER['REQUEST_URI']; //save current url for redirect     
+       $_SESSION['URI'] = 'http://us-cdbr-east-02.cleardb.com'.$_SERVER['REQUEST_URI']; //save current url for redirect     
        header('Location: http://us-cdbr-east-02.cleardb.com/appbnb/login.php', true, 303);       
     } 
 }
