@@ -15,7 +15,7 @@ echo '<div id="content">';
 
 <?php
 include "config.php"; //load in any variables
-$DBC = mysqli_connect( DBUSER, DBPASSWORD, DBDATABASE);
+$DBC = mysqli_connect(DBHOST, DBUSER, DBPASSWORD, DBDATABASE);
 
 //insert DB code from here onwards
 //check if the connection was good
@@ -76,7 +76,7 @@ $msg = 'Error: ';
         mysqli_stmt_close($stmt);
 
 //out echo and add a redirect///////////////////////////////////////////////////////////////// 
-		header('Location: http://    /listrooms.php', true, 301);
+		header('Location: http://us-cdbr-east-02.cleardb.com/appbnb/listrooms.php', true, 301);
           die();  
  } else { 
       echo "<h2>$msg</h2>".PHP_EOL;
