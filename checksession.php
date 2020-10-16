@@ -66,7 +66,7 @@ function logout(){
   $_SESSION['userid'] = -1;        
   $_SESSION['username'] = '';
   $_SESSION['URI'] = '';
-  header('Location: http://us-cdbr-east-02.cleardb.com/aheroku_a3952f44fb37877/login.php', true, 303);    
+  header('Location: http://us-cdbr-east-02.cleardb.com/heroku_a3952f44fb37877/login.php', true, 303);    
 }
 
 
