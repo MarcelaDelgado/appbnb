@@ -18,7 +18,7 @@ echo '<div id="content">';
 <?php
 
     include "config.php"; //load in any variables
-    $DBC = mysqli_connect(DBHOST, DBUSER, DBPASSWORD, DBDATABASE);
+    $DBC = mysqli_connect(DBUSER, DBPASSWORD, DBDATABASE);
  
     if (mysqli_connect_errno()) {
         echo "Error: Unable to connect to MySQL. ".mysqli_connect_error() ;
@@ -36,7 +36,7 @@ function cleanInput($data) {
 //the data was sent using a form therefore we use the $_POST instead of $_GET
 //check if we are saving data first by checking if the submit button exists in the array
 if (isset($_POST['submit'])and !empty($_POST['submit']) and ($_POST['submit'] == 'Register')) {
-//if ($_SERVER["REQUEST_METHOD"] == "POST") { //alternative simpler POST test        
+//if ($_SERVER["REQUEST_METHOD"] == "POST") { //alternative simpler POST test
  
  //validate incoming data - only the first field is done for you in this example - rest is up to you to do
 //firstname
@@ -67,7 +67,6 @@ if (isset($_POST['submit'])and !empty($_POST['submit']) and ($_POST['submit'] ==
      $role = cleanInput($_POST['role']);   	  
        
 //save the member data if the error flag is still clear
-      	   
 		   // prepare and bind
 $stmt = $DBC->prepare("INSERT INTO `customer` (firstname,lastname,email,username,password,role) VALUES (?,?,?,?,?,?)");
 $stmt->bind_param("ssssss", $firstname, $lastname, $email,$username,$password,$role);
@@ -79,8 +78,8 @@ $stmt->execute();
 $stmt->close();
 echo "New records created successfully";
 
-$DBC->close();      
-          
+$DBC->close();
+
 }  	
 
 ?>

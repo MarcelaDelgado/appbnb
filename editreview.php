@@ -21,7 +21,7 @@ echo '<div id="content">';
 
 <?php
 include "config.php"; //load in any variables
-$DBC = mysqli_connect(DBHOST, DBUSER, DBPASSWORD, DBDATABASE);
+$DBC = mysqli_connect( DBUSER, DBPASSWORD, DBDATABASE);
 
 //insert DB code from here onwards
 //check if the connection was good

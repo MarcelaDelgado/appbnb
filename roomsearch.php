@@ -7,7 +7,7 @@
 include "config.php"; //load in any variables
 
 // Create connection
-$DBC = mysqli_connect(DBHOST, DBUSER , DBPASSWORD, DBDATABASE);
+$DBC = mysqli_connect( DBUSER , DBPASSWORD, DBDATABASE);
 // Check connection
 
 

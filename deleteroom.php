@@ -74,7 +74,7 @@ $msg = 'Error: ';
         mysqli_stmt_close($stmt);    
         //echo "<h2>Member details updated.</h2>";    
 //out echo and add a redirect///////////////////////////////////////////////////////////////// 
-		header('Location: http://mysql02.au.ds.network:3306/listrooms.php', true, 301);
+		header('Location: http:// /listrooms.php', true, 301);
           die();  
  } else { 
       echo "<h2>$msg</h2>".PHP_EOL;
