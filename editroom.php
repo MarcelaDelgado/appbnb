@@ -76,7 +76,7 @@ $msg = 'Error: ';
         mysqli_stmt_close($stmt);
 
 //out echo and add a redirect///////////////////////////////////////////////////////////////// 
-		header('Location: http://us-cdbr-east-02.cleardb.com/appbnb/listrooms.php', true, 301);
+		header('Location: http://us-cdbr-east-02.cleardb.com/heroku_a3952f44fb37877/listrooms.php', true, 301);
           die();  
  } else { 
       echo "<h2>$msg</h2>".PHP_EOL;
