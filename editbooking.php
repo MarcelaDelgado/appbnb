@@ -90,7 +90,7 @@ $msg = 'Error: ';
         mysqli_stmt_close($stmt);    
         //echo "<h2>Member details updated.</h2>";    
 //out echo and add a redirect///////////////////////////////////////////////////////////////// 
-		header('Location: http://us-cdbr-east-02.cleardb.com/appbnb/currentbookinglist.php', true, 301);
+		header('Location: http://appbnb.herokuapp.com/currentbookinglist.php', true, 301);
           die();  
  } else { 
       echo "<h2>$msg</h2>".PHP_EOL;
