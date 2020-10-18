@@ -126,7 +126,7 @@ loginStatus();
   
    <label for="roomname" >Room (name,type,beds):
 	   <select name="roomname">
-	    <option value="Kelly">Kelly, S, 5</option>
+	    <option value="Kellie">Kellie, S, 5</option>
 		<option value="Herman">Herman, D, 5</option>
 	    <option value="Scarlett">Scarlett, D, 2</option>
 		<option value="Jelani">Jelani, S, 2</option>
