@@ -89,7 +89,6 @@ loginStatus();
 <h2><a href='currentbookinglist.php'>[Return to the current bookings]</a> <a href='index.php'>[Return to main page]</a></h2>
 <?php
 
-
 if ($rowcount > 0) {
 	
    echo "<fieldset><legend>Booking preview before deletion #$id</legend><dl>";
