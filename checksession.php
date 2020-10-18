@@ -7,8 +7,8 @@ function checkUser() {
     if ($_SESSION['loggedin'] == 1)
        return TRUE;
     else {
-       $_SESSION['URI'] = 'http://us-cdbr-east-02.cleardb.com'.$_SERVER['REQUEST_URI']; //save current url for redirect     
-       header('Location: http://us-cdbr-east-02.cleardb.com/heroku_a3952f44fb37877/login.php', true, 303);       
+       $_SESSION['URI'] = 'http://appbnb.herokuapp.com'.$_SERVER['REQUEST_URI']; //save current url for redirect     
+       header('Location: http://http://appbnb.herokuapp.com/login.php', true, 303);       
     } 
 }
  
@@ -29,7 +29,7 @@ function register($username,$password) {
    if ($_SESSION['register'] == 0 and !empty($_SESSION['URI'])) 
         $uri = $_SESSION['URI'];  
    else { 
-     $_SESSION['URI'] =  'http://us-cdbr-east-02.cleardb.com/heroku_a3952f44fb37877/registercustomer.php';  
+     $_SESSION['URI'] =  'http://appbnb.herokuapp.com/registercustomer.php';  
      $uri = $_SESSION['URI'];
    }  
 
@@ -49,7 +49,7 @@ function login($id,$username) {
    if ($_SESSION['loggedin'] == 0 and !empty($_SESSION['URI']))          
         $uri = $_SESSION['URI'];          
    else { 
-     $_SESSION['URI'] =  'http://us-cdbr-east-02.cleardb.com/heroku_a3952f44fb37877/listrooms.php';         
+     $_SESSION['URI'] =  'http://appbnb.herokuapp.com/listrooms.php';         
      $uri = $_SESSION['URI'];
    }     
    $_SESSION['loggedin'] = 1;
@@ -66,7 +66,7 @@ function logout(){
   $_SESSION['userid'] = -1;        
   $_SESSION['username'] = '';
   $_SESSION['URI'] = '';
-  header('Location: http://us-cdbr-east-02.cleardb.com/heroku_a3952f44fb37877/login.php', true, 303);    
+  header('Location: http://appbnb.herokuapp.com/login.php', true, 303);    
 }
 
 
