@@ -8,7 +8,7 @@ function checkUser() {
        return TRUE;
     else {
        $_SESSION['URI'] = 'http://appbnb.herokuapp.com'.$_SERVER['REQUEST_URI']; //save current url for redirect     
-       header('Location: http://http://appbnb.herokuapp.com/login.php', true, 303);       
+       header('Location: http://appbnb.herokuapp.com/login.php', true, 303);       
     } 
 }
  
